@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  http-proxy.public.dappnode.eth:
+    build: .
+    image: "http-proxy.public.dappnode.eth:0.1.0"
+    restart: always
+    ports:
+     - "80:80"
+networks:
+  default:
+    external:
+      name: dncore_network
